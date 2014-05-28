@@ -4,3 +4,6 @@ MapSearchApp.Views.ListItemView = Backbone.View.extend({
   className: "list-item"
 
 });
+
+// CSS class: "highlighted"
+// $checkbox.prop("checked", true/false);
