@@ -15,16 +15,12 @@ function testRealEstateList() {
 
   var re = collection.at(1);
   re.toggleSelected();
-  var selected = collection.map(function(re) {
-    return re.get("selected");
-  });
-  console.log(selected); // => F, T, F
+  var selectedList = collection.pluck("selected");
+  console.log(selectedList, "should be: F, T, F"); // => F, T, F
 
   re = collection.at(0);
   re.toggleSelected();
-  selected = collection.map(function(re) {
-    return re.get("selected");
-  });
-  console.log(selected); // => T, F, F
+  selectedList = collection.pluck("selected");
+  console.log(selectedList, "should be: T, F, F"); // => T, F, F
 }
 //testRealEstateList();
