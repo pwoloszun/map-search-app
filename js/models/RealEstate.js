@@ -8,9 +8,9 @@ MapSearchApp.Models.RealEstate = Backbone.Model.extend({
 function testRealEstate() {
   var re = new MapSearchApp.Models.RealEstate();
   console.log(re.isSelected()); // false
-  re.toggleSelecte();
+  re.toggleSelected();
   console.log(re.isSelected()); // true
-  re.toggleSelecte();
+  re.toggleSelected();
   console.log(re.isSelected()); // false
 }
 //testRealEstate();
