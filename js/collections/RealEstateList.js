@@ -3,6 +3,7 @@ MapSearchApp.Collections.RealEstateList = Backbone.Collection.extend({
   model: MapSearchApp.Models.RealEstate
 
   // TODO: observe models isSelected()
+
 });
 
 function testRealEstateList() {
@@ -24,3 +25,10 @@ function testRealEstateList() {
   console.log(selectedList, "should be: T, F, F"); // => T, F, F
 }
 //testRealEstateList();
+
+//
+// TODO *: implement sortBy(attrName)
+//collection.comparator = function(re1, re2) {
+//  return re1.get("name") >= re2.get("name");
+//};
+//collection.sort();
