@@ -27,7 +27,7 @@ function testRealEstateList() {
 //testRealEstateList();
 
 //
-// TODO *: implement sortBy(attrName)
+// TODO*: implement sortBy(attrName, reverse = false)
 //collection.comparator = function(re1, re2) {
 //  return re1.get("name") >= re2.get("name");
 //};
