@@ -1,8 +1,28 @@
 MapSearchApp.Collections.RealEstateList = Backbone.Collection.extend({
 
-  model: MapSearchApp.Models.RealEstate
+  model: MapSearchApp.Models.RealEstate,
 
   // TODO: observe models isSelected()
+
+  initialize: function() {
+    this.on("change:selected", function(changedRealEstate) {
+      if (changedRealEstate.isSelected()) {
+        this.each(function(realEstate) {
+          if (realEstate !== changedRealEstate && realEstate.isSelected()) {
+            realEstate.toggleSelected();
+          }
+        });
+      }
+    });
+  }
+
+
+});
+
+
+var reList = new MapSearchApp.Collections.RealEstateList();
+
+reList.each(function(realEstate, index) {
 
 });
 
@@ -27,8 +47,13 @@ function testRealEstateList() {
 //testRealEstateList();
 
 //
-// TODO*: implement sortBy(attrName, reverse = false)
-//collection.comparator = function(re1, re2) {
-//  return re1.get("name") >= re2.get("name");
-//};
-//collection.sort();
+// TODO*: implement selfSortBy(attrName, reverse = false)
+function collectionSortExample() {
+  collection.on("sort", function() {
+    // triggered after sort() called
+  });
+  collection.comparator = function(re1, re2) {
+    return re1.get("name") >= re2.get("name");
+  };
+  collection.sort();
+}
