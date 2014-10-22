@@ -1,30 +1,12 @@
 MapSearchApp.Collections.RealEstateList = Backbone.Collection.extend({
 
-  model: MapSearchApp.Models.RealEstate,
-
   // TODO: observe models isSelected()
 
-  initialize: function() {
-    this.on("change:selected", function(changedRealEstate) {
-      if (changedRealEstate.isSelected()) {
-        this.each(function(realEstate) {
-          if (realEstate !== changedRealEstate && realEstate.isSelected()) {
-            realEstate.toggleSelected();
-          }
-        });
-      }
-    });
-  }
-
-
 });
 
-
-var reList = new MapSearchApp.Collections.RealEstateList();
-
-reList.each(function(realEstate, index) {
-
-});
+//var reList = new MapSearchApp.Collections.RealEstateList();
+//reList.each(function(realEstate, index) {
+//});
 
 function testRealEstateList() {
   var json = [
