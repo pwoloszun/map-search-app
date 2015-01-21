@@ -8,6 +8,10 @@ MapSearchApp.Collections.RealEstateList = Backbone.Collection.extend({
 //reList.each(function(realEstate, index) {
 //});
 
+//collection.each(function(model) {
+//
+//});
+
 function testRealEstateList() {
   var json = [
     {selected: false},
@@ -29,7 +33,7 @@ function testRealEstateList() {
 //testRealEstateList();
 
 //
-// TODO*: implement selfSortBy(attrName, reverse = false)
+// TODO: implement sortByAttr(attrName, reverse = false)
 function collectionSortExample() {
   collection.on("sort", function() {
     // triggered after sort() called
