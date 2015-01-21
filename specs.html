@@ -10,22 +10,43 @@
   <script src="vendor/backbone.js"></script>
   <script src="vendor/handlebars.js"></script>
   <script src="vendor/chai.js"></script>
+  <script src="vendor/chai-jquery.js"></script>
   <script src="vendor/sinon-chai.js"></script>
   <script src="vendor/sinon.js"></script>
   <script src="vendor/jasmine.js"></script>
   <script src="vendor/jasmine-html.js"></script>
+
+  <!-- handlebars templates -->
+  <script id="page-template" type="text/x-handlebars-template">
+    <div class="top-container clearfix">
+      <div class="map-container">
+        MAP PLACEHOLDER
+      </div>
+      <div class="details-container">
+        DETAILS PLACEHOLDER
+      </div>
+    </div>
+    <div class="list-container">
+      LIST PLACEHOLDER
+    </div>
+  </script>
+
   <!-- specs runner -->
   <script src="vendor/jasmine-boot.js"></script>
 
   <!-- app src -->
+  <script src="js/namespace.js"></script>
+  <script src="js/services/templates.js"></script>
   <script src="js/models/RealEstate.js"></script>
   <script src="js/collections/RealEstateList.js"></script>
+  <script src="js/views/PageView.js"></script>
   <script src="js/views/DetailsView.js"></script>
   <script src="js/views/MarkerView.js"></script>
 
   <!-- specs -->
   <script src="specs/models/RealEstateSpec.js"></script>
   <script src="specs/collections/RealEstateListSpec.js"></script>
+  <script src="specs/views/PageViewSpec.js"></script>
   <script src="specs/views/DetailsViewSpec.js"></script>
   <script src="specs/views/MarkerViewSpec.js"></script>
 
