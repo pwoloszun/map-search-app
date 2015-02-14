@@ -5,8 +5,8 @@ MapSearchApp.Services.pubSub = (function() {
     publish: function(topic, args) {
       eventAgg.trigger(topic, args);
     },
-    subscribe: function(topic, fn) {
-      eventAgg.on(topic, fn);
+    subscribe: function(topic, fn, ctx) {
+      eventAgg.on(topic, fn, ctx);
     }
   };
 })();

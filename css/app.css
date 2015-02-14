@@ -113,6 +113,16 @@ body {
   left: 12px;
 }
 
+.more-results-pub-sub {
+  border: 1px solid #000;
+  background-color: #777777;
+  color: #fff;
+  padding: 30px;
+  position: fixed;
+  bottom: 60px;
+  left: 12px;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
